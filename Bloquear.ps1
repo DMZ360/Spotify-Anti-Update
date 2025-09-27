@@ -42,7 +42,7 @@ function BlockUpdate {
         # 2. Aplicar el bloqueo
         $new = $old -replace $modPtrn, '7/update'
         [IO.File]::WriteAllText($spotifyexe, $new, $ANSI)
-        Write-Host "Spotify: ¡Actualizaciones bloqueadas con exito!" -ForegroundColor Green
+        Write-Host "Spotify: Actualizaciones bloqueadas con exito!" -ForegroundColor Green
     }
     else {
         Write-Host "Spotify: Fallo al bloquear las actualizaciones. El patrón del archivo no coincide con versiones conocidas." -ForegroundColor Yellow
@@ -54,6 +54,7 @@ Write-Host ""
 Write-Host " Ejecutando el Bloqueador de Actualizaciones " -ForegroundColor Yellow;
 BlockUpdate
 Write-Host "Proceso finalizado."
+
 
 
 
