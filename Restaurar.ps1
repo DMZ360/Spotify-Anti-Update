@@ -9,7 +9,7 @@ Get-Process -Name "SpotifyWebHelper" -ErrorAction SilentlyContinue | Stop-Proces
 
 # Lógica de restauración
 if (Test-Path $exe_bak) {
-    Write-Host "Iniciando restauración desde Spotify.bak..." -ForegroundColor Yellow;
+    Write-Host "Iniciando restauracion desde Spotify.bak..." -ForegroundColor Yellow;
     
     # 1. Eliminar el archivo .exe modificado
     Remove-Item $spotifyexe -Force -ErrorAction SilentlyContinue;
@@ -21,3 +21,4 @@ if (Test-Path $exe_bak) {
 } else {
     Write-Host " ERROR: No se encontro el archivo de respaldo Spotify.bak en la ruta: $spRoaming. El desbloqueo manual es necesario." -ForegroundColor Red
 }
+
