@@ -34,15 +34,15 @@ function BlockUpdate {
         # 1. Crear copia de seguridad solo si no existe
         if (-not (Test-Path $exe_bak)) {
             Copy-Item $spotifyexe $exe_bak
-            Write-Host "Se creó la copia de seguridad: Spotify.bak" -ForegroundColor Green
+            Write-Host "Se creo la copia de seguridad: Spotify.bak" -ForegroundColor Green
         } else {
-            Write-Host "Spotify.bak ya existe. No se sobrescribirá." -ForegroundColor Yellow
+            Write-Host "Spotify.bak ya existe. No se sobrescribira." -ForegroundColor Yellow
         }
         
         # 2. Aplicar el bloqueo
         $new = $old -replace $modPtrn, '7/update'
         [IO.File]::WriteAllText($spotifyexe, $new, $ANSI)
-        Write-Host "Spotify: ¡Actualizaciones bloqueadas con éxito!" -ForegroundColor Green
+        Write-Host "Spotify: ¡Actualizaciones bloqueadas con exito!" -ForegroundColor Green
     }
     else {
         Write-Host "Spotify: Fallo al bloquear las actualizaciones. El patrón del archivo no coincide con versiones conocidas." -ForegroundColor Yellow
@@ -54,6 +54,7 @@ Write-Host ""
 Write-Host " Ejecutando el Bloqueador de Actualizaciones " -ForegroundColor Yellow;
 BlockUpdate
 Write-Host "Proceso finalizado."
+
 
 
 
