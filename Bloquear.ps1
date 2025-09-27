@@ -51,7 +51,8 @@ function BlockUpdate {
 
 # --- Ejecución ---
 Write-Host ""
-Write-Host "--- Ejecutando el Bloqueador de Actualizaciones ---" -ForegroundColor Cyan
+Write-Host " Ejecutando el Bloqueador de Actualizaciones " -ForegroundColor Cyan
 BlockUpdate
 Write-Host "Proceso finalizado."
+
 
