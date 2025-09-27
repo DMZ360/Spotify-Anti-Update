@@ -27,7 +27,7 @@ function BlockUpdate {
     $modPtrn = "(?<=desktop-update\/.)2(\/update)" # original
 
     if ($old -match $natPtrn) {
-        Write-Host "Spotify: Las actualizaciones ya estan bloqueadas."
+        Write-Host "Spotify: Las actualizaciones ya estan bloqueadas." -ForegroundColor Green
         return
     }
     elseif ($old -match $modPtrn) {
@@ -51,8 +51,9 @@ function BlockUpdate {
 
 # --- Ejecución ---
 Write-Host ""
-Write-Host " Ejecutando el Bloqueador de Actualizaciones " -ForegroundColor Cyan
+Write-Host " Ejecutando el Bloqueador de Actualizaciones " -ForegroundColor Yellow;
 BlockUpdate
 Write-Host "Proceso finalizado."
+
 
 
