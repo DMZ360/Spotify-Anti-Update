@@ -17,7 +17,7 @@ if (Test-Path $exe_bak) {
     # 2. Renombrar el .bak a .exe para restaurar el original
     Rename-Item -Path $exe_bak -NewName 'Spotify.exe' -Force;
     
-    Write-Host " Restauración completa. Las actualizaciones de Spotify están desbloqueadas." -ForegroundColor Green
+    Write-Host " Restauracion completa. Las actualizaciones de Spotify estan desbloqueadas." -ForegroundColor Green
 } else {
-    Write-Host " ERROR: No se encontró el archivo de respaldo Spotify.bak en la ruta: $spRoaming. El desbloqueo manual es necesario." -ForegroundColor Red
+    Write-Host " ERROR: No se encontro el archivo de respaldo Spotify.bak en la ruta: $spRoaming. El desbloqueo manual es necesario." -ForegroundColor Red
 }
